@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Outlet, Link, useLocation } from 'react-router';
-import logo from 'figma:asset/60495ad2ae8c7d589b232abf10a4905ec7205013.png';
+import { Outlet, Link, useLocation } from 'react-router-dom';
+import logo from './images/Logo.png';
 
 export function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,7 +9,7 @@ export function Layout() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = window.innerHeight * 0.85; // 히어로 섹션 높이
+      const heroHeight = window.innerHeight * 0.85;
       setIsScrolled(window.scrollY > heroHeight);
     };
 
@@ -24,9 +24,7 @@ export function Layout() {
       {/* Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          shouldBeTransparent
-            ? 'bg-transparent'
-            : 'bg-amber-50 shadow-md'
+          shouldBeTransparent ? 'bg-transparent' : 'bg-amber-50 shadow-md'
         }`}
       >
         <nav className="container mx-auto px-6 py-4">

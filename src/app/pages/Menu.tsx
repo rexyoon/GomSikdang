@@ -9,8 +9,8 @@ export function Menu() {
           price: "15,000원"
         },
         {
-          name: "전통 된장찌개",
-          description: "깊은 맛의 전통 된장으로 끓인 찌개",
+          name: "곰식당 파스타",
+          description: "깊은 맛의 전통으로 볶은 파스타",
           price: "9,000원"
         },
         {
@@ -29,8 +29,8 @@ export function Menu() {
           price: "12,000원"
         },
         {
-          name: "갈비찜",
-          description: "부드럽게 익힌 소갈비찜",
+          name: "곰파육",
+          description: "부드럽게 익힌 통삼겹조림",
           price: "25,000원"
         },
         {
@@ -64,8 +64,8 @@ export function Menu() {
       category: "식사 & 면류",
       items: [
         {
-          name: "비빔밥",
-          description: "신선한 나물과 고추장의 조화",
+          name: "곰밥",
+          description: "신선한 곰나물 비빔밥",
           price: "10,000원"
         },
         {

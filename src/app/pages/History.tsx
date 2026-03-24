@@ -1,32 +1,32 @@
 export function History() {
   const timeline = [
     {
-      year: "1995",
-      title: "곰식당의 시작",
-      description: "작은 골목의 10평 남짓한 공간에서 곰식당이 처음 문을 열었습니다. 정성스러운 음식 하나로 시작한 작은 꿈이었습니다."
-    },
-    {
       year: "2000",
-      title: "첫 번째 확장",
-      description: "입소문을 타고 찾아오시는 손님들이 늘어나면서 옆 건물로 확장 이전하였습니다. 좌석이 50석으로 늘어났습니다."
+      title: "곰식당의 시작",
+      description: "태어나자마자 식칼을 잡고 바로 요리를 시작했습니다"
     },
     {
-      year: "2005",
+      year: "2016",
+      title: "서울고 입학",
+      description: "입소문을 타고 찾아오시는 손님들이 늘어나면서 일이 힘들어지자 서울고 입학을 선택해 도망을 택함."
+    },
+    {
+      year: "2020",
       title: "미쉐린 가이드 등재",
       description: "한국 미쉐린 가이드에 처음으로 등재되며, 곰식당의 맛을 인정받았습니다."
     },
     {
-      year: "2010",
+      year: "2021",
       title: "전통 계승",
       description: "2세대 주방장이 합류하며 전통의 맛을 이어가면서도 새로운 메뉴를 개발하기 시작했습니다."
     },
     {
-      year: "2015",
+      year: "2022",
       title: "리모델링",
       description: "고객들에게 더 쾌적한 환경을 제공하기 위해 전면 리모델링을 단행했습니다. 현대적이면서도 전통의 멋을 살렸습니다."
     },
     {
-      year: "2020",
+      year: "2024",
       title: "온라인 서비스 시작",
       description: "코로나19 시기를 맞아 배달과 포장 서비스를 시작했습니다. 집에서도 곰식당의 맛을 즐길 수 있게 되었습니다."
     },
@@ -43,7 +43,7 @@ export function History() {
       <section className="pt-32 pb-20 bg-amber-100">
         <div className="container mx-auto px-6">
           <h1 className="text-5xl text-center text-amber-900 mb-6">식당의 역사</h1>
-          <p className="text-xl text-center text-stone-700">30년이 넘는 곰식당의 발자취</p>
+          <p className="text-xl text-center text-stone-700">26년의 곰식당의 발자취</p>
         </div>
       </section>
 
@@ -54,7 +54,7 @@ export function History() {
             <div className="bg-white rounded-lg shadow-lg p-12 mb-16">
               <h2 className="text-3xl text-amber-900 mb-6">곰식당 이야기</h2>
               <p className="text-lg text-stone-700 leading-relaxed mb-4">
-                1995년, 작은 골목의 10평 남짓한 공간에서 곰식당은 시작되었습니다.
+                2000년, 작은 골목의 10평 남짓한 공간에서 곰식당은 시작되었습니다.
                 "곰처럼 강하고 따뜻한 음식을 만들자"는 창업주의 철학으로 시작된 곰식당은
                 지난 30여 년간 한결같은 맛과 정성으로 고객님들의 사랑을 받아왔습니다.
               </p>
@@ -64,7 +64,7 @@ export function History() {
                 엄선한 재료들로 만든 요리는 곰식당만의 특별한 맛을 만들어냈습니다.
               </p>
               <p className="text-lg text-stone-700 leading-relaxed">
-                지금은 2세대가 가업을 이어받아 전통의 맛을 지키면서도 현대적인 감각을 더하고 있습니다.
+                전통의 맛을 지키면서도 현대적인 감각을 더하고 있습니다.
                 앞으로도 곰식당은 변함없는 정성으로 고객님들께 최고의 맛을 선사하겠습니다.
               </p>
             </div>
@@ -72,7 +72,7 @@ export function History() {
             {/* Timeline */}
             <div className="relative">
               <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-amber-300" />
-              
+
               <div className="space-y-12">
                 {timeline.map((item, idx) => (
                   <div key={idx} className="relative pl-20">

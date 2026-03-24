@@ -1,17 +1,28 @@
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import heroVideo from '../components/images/hero.mp4'; // ← 여기에 네 경로 넣으면 됨
 
 export function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="relative h-screen bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1708675532078-ba3995800f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrb3JlYW4lMjByZXN0YXVyYW50JTIwaW50ZXJpb3IlMjB3YXJtJTIwY296eXxlbnwxfHx8fDE3NzQzMjU0MjR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')`
-        }}
-      >
-        <div className="text-center text-white px-6">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+
+        {/* 🔥 Background Video */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+
+        {/* 🔥 어두운 오버레이 (가독성용) */}
+        <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+
+        {/* 🔥 콘텐츠 */}
+        <div className="relative z-10 text-center text-white px-6">
           <h1 className="text-6xl md:text-8xl mb-6">곰식당</h1>
           <p className="text-2xl md:text-3xl mb-12">야찐도 반한 맛</p>
           <Link
@@ -41,44 +52,24 @@ export function Home() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Link
-              to="/about"
-              className="group bg-amber-50 p-8 rounded-lg hover:bg-amber-100 transition-colors"
-            >
+            <Link to="/about" className="group bg-amber-50 p-8 rounded-lg hover:bg-amber-100 transition-colors">
               <h3 className="text-2xl mb-4 text-amber-900 group-hover:text-amber-700">식당소개</h3>
-              <p className="text-stone-600">
-                곰식당의 철학과 가치를 만나보세요
-              </p>
+              <p className="text-stone-600">곰식당의 철학과 가치를 만나보세요</p>
             </Link>
 
-            <Link
-              to="/menu"
-              className="group bg-amber-50 p-8 rounded-lg hover:bg-amber-100 transition-colors"
-            >
+            <Link to="/menu" className="group bg-amber-50 p-8 rounded-lg hover:bg-amber-100 transition-colors">
               <h3 className="text-2xl mb-4 text-amber-900 group-hover:text-amber-700">메뉴</h3>
-              <p className="text-stone-600">
-                다양한 메뉴를 확인하세요
-              </p>
+              <p className="text-stone-600">다양한 메뉴를 확인하세요</p>
             </Link>
 
-            <Link
-              to="/chef"
-              className="group bg-amber-50 p-8 rounded-lg hover:bg-amber-100 transition-colors"
-            >
+            <Link to="/chef" className="group bg-amber-50 p-8 rounded-lg hover:bg-amber-100 transition-colors">
               <h3 className="text-2xl mb-4 text-amber-900 group-hover:text-amber-700">주방장</h3>
-              <p className="text-stone-600">
-                우리 주방장을 소개합니다
-              </p>
+              <p className="text-stone-600">우리 주방장을 소개합니다</p>
             </Link>
 
-            <Link
-              to="/history"
-              className="group bg-amber-50 p-8 rounded-lg hover:bg-amber-100 transition-colors"
-            >
+            <Link to="/history" className="group bg-amber-50 p-8 rounded-lg hover:bg-amber-100 transition-colors">
               <h3 className="text-2xl mb-4 text-amber-900 group-hover:text-amber-700">역사</h3>
-              <p className="text-stone-600">
-                곰식당의 이야기를 들어보세요
-              </p>
+              <p className="text-stone-600">곰식당의 이야기를 들어보세요</p>
             </Link>
           </div>
         </div>
