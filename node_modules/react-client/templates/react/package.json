@@ -1,0 +1,14 @@
+{
+  "name": "template-react",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "react-client dev",
+    "build": "react-client build",
+    "preview": "react-client preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

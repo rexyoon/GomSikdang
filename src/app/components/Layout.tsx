@@ -2,6 +2,20 @@ import { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import logo from './images/Logo.png';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    });
+  }, [pathname]);
+
+  return null;
+}
+
 export function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -13,6 +27,7 @@ export function Layout() {
       setIsScrolled(window.scrollY > heroHeight);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -21,6 +36,8 @@ export function Layout() {
 
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
+
       {/* Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
